@@ -3,6 +3,7 @@
 #. Strings passed in will consist of only letters and spaces. 
 # Spaces will be included only when more than one word is present.
 
+#1. Looping over index
 def spin_words(sentence):
     word = sentence.split()
     length = len(word)
@@ -15,3 +16,13 @@ def spin_words(sentence):
 
 print(spin_words('This is another test'))
 
+# looping over copy of list.
+def prctc(text):
+    words = text.split()
+    result = [] # Needeed !!!
+    for word in words:
+        if len(word) >= 5:
+            result.append(word[::-1]) 
+        else: 
+            result.append(word)
+    return " ".join(result)
